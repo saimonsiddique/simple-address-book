@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style/addressbook.css">
+        <title>Address Book</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="header"><em>Address Book</em></h1>
+        </header>
+        <div class="container">
+            <section id="contact-display">
+                <h2 class="contacts">Contacts Information</h2>
+                <div class="searchBar">'
+                    <label for="mySearch">Search:</label>
+                    <input type="search" id="search" size="50" placeholder="Search Address by Person Name">
+                    <button type="submit" value="mySearch">Search</button>
+                </div>
+                <table>
+                    <thead id="table-head">
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody id="address-list">
+                    </tbody>
+                </table>
+            </section>
+            <section id="new-contact">
+                <h2>Create a new Contact</h2>
+                <form id="address-form">
+                    <div>
+                        <label for="person-name">Name:</label>
+                        <input id="person-name" type="text" maxlength="25" required>
+                    </div>
+                    <div>
+                        <label for="surname">Surname:</label>
+                        <input id="surname" type="text" maxlength="25" required>
+                    </div>
+                    <div>
+                        <label for="address">Address:</label>
+                        <input id="address" type="text" maxlength="30" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input id="phone" type="tel" maxlength="11" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Create contacts" class="addbutton">
+                    </div>
+                </form>
+            </section>
+        </div>
+        <script src="/scripts/addressbook.js"></script>
+    </body>
+
+</html>
