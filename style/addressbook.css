@@ -1,3 +1,5 @@
+/* https://www.w3schools.com/css/default.asp */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px auto;
@@ -18,51 +20,81 @@ body {
 
 .contacts {
     padding: auto;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
 }
 
-.searchBar {
-    margin: auto;
-    width: 70%;
-    padding: 10px 10px;
-    align-content: center;
-    align-items: center;
+.newContacts {
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
 }
+
+#search {
+    display: flex;
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+
+#searchInput {
+    display: inherit;
+    width: 100%;
+    padding: 1em 1em;
+}
+
+#search label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
 
 th {
     color: rgb(2, 17, 29);
-    width: 10%;
+    width: 5%;
     align-content: center;
     background-color: rgb(82, 172, 228);
-    border: 2px solid rgb(190, 190, 190);
+    border: none;
     padding: 10px 50px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 td {
-    border: 1px solid rgb(136, 169, 231);
-    padding: 0px 10px;
+    background-color: rgb(111, 202, 202);
+    font-weight: bold;
+    padding: 2px 10px;
 }
 
-#new-contact,
+
 #contact-display {
-    padding: 30px;
+    display: inherit;
+    padding: 40px;
 }
 
-#new-contact {
-    background: rgb(170, 238, 153);
+.new-contact-info {
+    padding: auto;
+    width: 95%;
+    margin: auto;
+    background: rgb(220, 98, 98);
+    border-radius: 20px;
 }
 
 .addbutton {
     border: none;
     border-radius: 20px;
-    color: rgb(36, 97, 45);
+    color: rgb(11, 109, 26);
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
-    margin-left: 80px;
+    margin-left: 855px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
@@ -79,10 +111,63 @@ div {
 label {
     display: inline-block;
     width: 90px;
+    font-size: 20px;
     text-align: right;
 }
 
-footer {
+/* https://www.w3schools.com/howto/howto_js_filter_lists.asp */
+
+#person-name {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#surname {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#address {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#phone {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+#email {
+    display: inline-block;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.footer {
     text-align: center;
     font-size: 15px;
     background-color: blueviolet;
