@@ -1,8 +1,9 @@
+// https://www.w3schools.com/js/default.asp
+
 // Get the UI elements
 let form = document.querySelector('#address-form');
 let addressList = document.querySelector('#address-list');
-let search = document.querySelector('#search');
-
+let search = document.querySelector('#searchInput');
 
 
 // Address Class
@@ -19,7 +20,7 @@ class Address {
 // Add event listener to form
 form.addEventListener('submit', newAddress);
 addressList.addEventListener('click', removeAddress);
-search.addEventListener('submit', searchAddress);
+search.addEventListener('keyup', searchAddress);
 
 // UI Class
 class UI {
@@ -45,16 +46,19 @@ class UI {
         document.querySelector('#phone').value = '';
     }
 
-    static searchAddress(search) {
-        let filter = search.value.toUpperCase();
+    /*
+    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_list
+    */
+    static searchAddress(target) {
+        let filter = target.value.toUpperCase();
         let table = document.querySelector('#address-list');
         let tr = table.getElementsByTagName('tr');
 
         for (let i = 0; i < tr.length; i++) {
             let td = tr[i].getElementsByTagName('td')[0];
             if (td) {
-                let txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                let textValue = td.textContent || td.innerText;
+                if (textValue.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display = '';
                 } else {
                     tr[i].style.display = 'none';
@@ -97,8 +101,8 @@ function removeAddress(e) {
     e.preventDefault();
 }
 
-// Search Address
+// Define searchAddress function
 function searchAddress(e) {
-    UI.searchAddress(search);
+    UI.searchAddress(e.target);
     e.preventDefault();
 }
