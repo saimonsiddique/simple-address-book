@@ -1,3 +1,5 @@
+<!-- https://www.w3schools.com/html/default.asp -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style/addressbook.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Address Book</title>
     </head>
 
@@ -15,11 +19,13 @@
         </header>
         <div class="container">
             <section id="contact-display">
-                <h2 class="contacts">Contacts Information</h2>
-                <div class="searchBar">'
-                    <label for="mySearch">Search:</label>
-                    <input type="search" id="search" size="50" placeholder="Search Address by Person Name">
-                    <button type="submit" value="mySearch">Search</button>
+                <h2 class="contacts">CONTACT INFORMATION</h2>
+
+                <!-- https://javascript.plainenglish.io/how-to-build-a-search-bar-7d8a8a3d9d00 -->
+
+                <div id="search">
+                    <label for="searchInput">Find <i class="fa fa-search"></i>Contact</label>
+                    <input id="searchInput" type="text" placeholder="Search">
                 </div>
                 <table>
                     <thead id="table-head">
@@ -33,24 +39,30 @@
                     </tbody>
                 </table>
             </section>
-            <section id="new-contact">
-                <h2>Create a new Contact</h2>
+
+            <!-- https://code-projects.org/simple-address-book-in-javascript-with-source-code/ -->
+
+            <section id="new-contact" class="new-contact-info">
+                <h2 class="newContacts">CREATE A NEW CONTACT</h2>
                 <form id="address-form">
                     <div>
                         <label for="person-name">Name:</label>
-                        <input id="person-name" type="text" maxlength="25" required>
+                        <input id="person-name" type="text" placeholder="Enter Your Contact's Name..." maxlength="25"
+                            required>
                     </div>
                     <div>
                         <label for="surname">Surname:</label>
-                        <input id="surname" type="text" maxlength="25" required>
+                        <input id="surname" type="text" maxlength="25" placeholder="Enter Contact's Surname..."
+                            required>
                     </div>
                     <div>
                         <label for="address">Address:</label>
-                        <input id="address" type="text" maxlength="30" required>
+                        <input id="address" type="text" maxlength="30" placeholder="Enter Contact's Address..."
+                            required>
                     </div>
                     <div>
                         <label for="phone">Phone:</label>
-                        <input id="phone" type="tel" maxlength="11" required>
+                        <input id="phone" type="tel" maxlength="11" placeholder="Enter Contact's Phone..." required>
                     </div>
                     <div>
                         <input type="submit" value="Create contacts" class="addbutton">
@@ -58,6 +70,9 @@
                 </form>
             </section>
         </div>
+        <footer>
+            <p class="footer">© 2023 Address Book</p>
+        </footer>
         <script src="/scripts/addressbook.js"></script>
     </body>
 
