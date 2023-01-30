@@ -9,17 +9,15 @@ body {
 
 .header {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     background-color: blueviolet;
     color: white;
     margin: auto;
-    padding: 20px 20px;
-    align-content: center;
-    align-items: center;
+    padding: 15px 15px;
 }
 
 .contacts {
-    padding: auto;
+    padding: 10px 10px;
     text-align: center;
     font-size: 30px;
     color: black;
@@ -73,7 +71,6 @@ td {
 
 #contact-display {
     display: inherit;
-    padding: 40px;
 }
 
 .new-contact-info {
@@ -85,18 +82,16 @@ td {
 }
 
 .addbutton {
+    display: block;
     border: none;
     border-radius: 20px;
     color: rgb(11, 109, 26);
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 20px;
-    margin: 4px 2px;
-    margin-left: 855px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+    width: fit-content;
+    margin: auto;
 }
 
 .addbutton:hover {
